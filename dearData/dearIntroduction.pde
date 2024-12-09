@@ -1,4 +1,4 @@
-//This is a Dear Diary page that records the types of pictures
+//This is a Dear Data page that records the types of pictures
 //and videos I have taken in a week of my Reading week.
 
 //The data is represented through the form of a musical sheet,
@@ -13,7 +13,9 @@
 //instead of by myself (where a dot is added to the side of the note).
 //I documented the types of pictures and videos I took through a week
 //in a csv file, and I wrote a program that looped through the data
-//and hence drawing the musical sheet out.
+//and hence drawing the musical sheet out. In addition, I inserted 
+//my favourite picture of the week, which is a picture that I took, 
+//of something cute on Saturday!
 
 //Interactive features:
 //  Click to jumble - Click your mouse anywhere within the canvas, for
@@ -26,4 +28,5 @@
 //    with 9 being the lowest note). Use the magical keyboard to play
 //    the musical sheet out!
 
-//Joyce Ow ♪ ♫ ♪ ~
+//Joyce Ow ♪
+//2024 ♪ ♫ ♪ ~

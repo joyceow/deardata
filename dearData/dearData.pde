@@ -2,6 +2,7 @@ String [] diaryData;
 String [][] data;
 String [] dates = { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 StringList types = new StringList ("interesting", "food", "building", "school", "friends", "lights", "nature", "random", "cute");
+PImage img;
 
 //add sounds
 import processing.sound.*;
@@ -9,7 +10,7 @@ SoundFile do1, re1, mi, fa, so, la, ti, do2, re2;
 
 void setup() {
   size(1400, 800);
-  
+
   //initialise sounds
   re2=new SoundFile(this, "re2.mp3");
   do2=new SoundFile(this, "do2.mp3");
@@ -23,7 +24,7 @@ void setup() {
 }
 
 void draw() {
-  
+
   //load data
   diaryData=loadStrings("deardiarydata.csv");
   data=new String [diaryData.length][];
@@ -63,7 +64,7 @@ void draw() {
   //draw in legend
   drawLegend();
 
-  //draw notes in by days 
+  //draw notes in by days
   for (int i=0; i<data.length; i++) {
     if (data[i][0].equals("Mon")) {
       float x=120+(i*40);
@@ -131,27 +132,31 @@ void draw() {
       f++;
     }
   }
+  
+   //load fav picture
+  img = loadImage("picture.png");
+  image(img, 1020, 400);
 }
 
 //build a keyboard piano
-void keyPressed(){
-  if (key=='1'){
-    re2.play(); 
-  } else if (key=='2'){
-    do2.play(); 
-  } else if (key=='3'){
-    ti.play(); 
-  } else if (key=='4'){
-    la.play(); 
-  } else if (key=='5'){
-    so.play(); 
-  } else if (key=='6'){
-    fa.play(); 
-  } else if (key=='7'){
-    mi.play(); 
-  } else if (key=='8'){
-    re1.play(); 
-  } else if (key=='9'){
-    do1.play(); 
-  } 
+void keyPressed() {
+  if (key=='1') {
+    re2.play();
+  } else if (key=='2') {
+    do2.play();
+  } else if (key=='3') {
+    ti.play();
+  } else if (key=='4') {
+    la.play();
+  } else if (key=='5') {
+    so.play();
+  } else if (key=='6') {
+    fa.play();
+  } else if (key=='7') {
+    mi.play();
+  } else if (key=='8') {
+    re1.play();
+  } else if (key=='9') {
+    do1.play();
+  }
 }
